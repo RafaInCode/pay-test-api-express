@@ -49,4 +49,9 @@ app.get('/', (req, res) => {
 app.get("/cities", citiesController.index);
 
 
+//404
+app.get('*', function (req, res) {
+    res.status(404).send({error: true, status: 404});
+});
+
 export default app;
