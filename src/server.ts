@@ -1,6 +1,9 @@
 import errorHandler from "errorhandler";
 
 import app from "./app";
+import Data from "./data/data";
+
+new Data;
 
 /**
  * Error Handler. Provides full stack - remove for production

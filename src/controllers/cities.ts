@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import Data from "../data/data";
 
 /**
  * @api {get} /user/:id Request User information
@@ -11,5 +12,5 @@ import { Request, Response } from "express";
  * @apiSuccess {String} lastname  Lastname of the User.
  */
 export const index = (req: Request, res: Response) => {
-    res.status(200).send( {teste: "teste ok"} );
+    res.status(200).send(Data.data.City);
 };
