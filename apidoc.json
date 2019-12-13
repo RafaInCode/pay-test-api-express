@@ -1,7 +1,7 @@
 {
     "name": "Weather - Pay Test Api",
     "version": "0.1.0",
-    "description": "Start de api para ler previsão do tempo.",
+    "description": "Api para ler previsão do tempo.",
     "apidoc": {
         "title": "Weather - Pay Test Api",
         "url": "https://localhost:8080/v1/"
