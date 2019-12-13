@@ -1,9 +1,18 @@
 import request from "supertest";
 import app from "../src/app";
+import Data from "../src/data/data";
+new Data;
 
 describe("GET /cities", () => {
     it("should return 200 OK", () => {
         return request(app).get("/cities")
+            .expect(200);
+    });
+});
+
+describe("GET /cities/weather", () => {
+    it("should return 200 OK", () => {
+        return request(app).get("/cities/weather")
             .expect(200);
     });
 });

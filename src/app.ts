@@ -47,6 +47,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cities", citiesController.index);
+app.get("/cities/weather", citiesController.getCitiesWithWeather);
+app.get("/city/:cityId", citiesController.getCity);
+app.get("/city/coordinates/:lat/:lon", citiesController.getCityByCoordinates);
+
 
 
 //404

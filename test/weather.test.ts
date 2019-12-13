@@ -7,10 +7,10 @@ describe("GET /wheather", () => {
             .expect(200);
     });
 });
-
+/*
 describe("GET /wheather/period/:start/to/:end", () => {
     it("should return 200 OK", () => {
         return request(app).get("/wheather/2017-03-12/to/2017-03-21")
             .expect(200);
     });
-});
+});*/

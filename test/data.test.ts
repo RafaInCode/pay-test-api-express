@@ -2,10 +2,9 @@ import chai from "chai";
 import Data from "../src/data/data";
 
 const expect = chai.expect; // eslint-disable-line
+new Data;
 
 describe("Data", () => {
-    new Data;
-
     it("expect have a City", () => {    
         expect(Data.data.City).to.not.be.empty;
     });
