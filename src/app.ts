@@ -16,7 +16,7 @@ const app = express();
 // Express configuration
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "../views"));
-app.set('view engine', 'pug');
+app.set("view engine", "pug");
 
 app.use(compression());
 app.use(bodyParser.json());
@@ -42,15 +42,15 @@ app.use(
 /**
  * Primary app routes.
  */
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public', 'index.html'));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public", "index.html"));
 });
 
 app.get("/cities", citiesController.index);
 
 
 //404
-app.get('*', function (req, res) {
+app.get("*", function (req, res) {
     res.status(404).send({error: true, status: 404});
 });
 
