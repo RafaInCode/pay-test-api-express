@@ -9,6 +9,7 @@ app.get("/city/coordinates/:lat/:lon", citiesController.getCityByCoordinates);
 
 /**
  * @api {get} /cities 1. Lista Cidades
+ * @apiName getCities
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
@@ -24,7 +25,7 @@ export const index = (req: Request, res: Response) => {
 
 /**
  * @api {get} /cities:id 2. Obtem cidade por ID
- * @apiName Obtem cidade por ID
+ * @apiName getCitiesById
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
@@ -34,6 +35,8 @@ export const index = (req: Request, res: Response) => {
  * 
  * @apiSuccess {Number}     id          Identificador único
  * @apiSuccess {Object}     coord       Coordenadas globais
+ * @apiSuccess {Number}     coord.lat       Latitude
+ * @apiSuccess {Number}     coord.lon       Longitude
  * @apiSuccess {String}     country     País onde está localizada
  * @apiSuccess {Object}     geoname     Geonames da cidade
  * @apiSuccess {String}     name        Node da cidade
@@ -61,7 +64,7 @@ export const getCity = (req: Request, res: Response) => {
 
 /**
  * @api {get} /cities 3. Obtem Cidade por Periodo do Clima
- * @apiName Obtem Cidade por Periodo do Clima
+ * @apiName getCityByWeatherPeriod
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
@@ -97,7 +100,7 @@ export const getCityWeatherPeriod = (req: Request, res: Response) => {
 
 /**
  * @api {get} /cities 4. Obtem Cidade pelas Coordenadas
- * @apiName Obtem Cidade pelas Coordenadas
+ * @apiName getCitiesByCoordnates
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
@@ -117,7 +120,7 @@ export const getCityByCoordinates = (req: Request, res: Response) => {
 
 /**
  * @api {get} /cities 5. Lista Cidades com Clima
- * @apiName Lista Cidades com Clima
+ * @apiName getCitiesWithWeather
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
