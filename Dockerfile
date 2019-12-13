@@ -11,6 +11,7 @@ RUN npm -g config set user root
 COPY . /pay-test-api
 
 RUN npm install --production
+RUN npm install -g apidoc
 RUN npm run build
 
 CMD ["npm","start"]

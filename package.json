@@ -11,7 +11,7 @@
     "scripts": {
         "start": "npm run serve",
         "guild": "pwd",
-        "build": "npm run build-sass && npm run build-ts && npm run copy-static-assets",
+        "build": "npm run build-sass && npm run build-ts && npm run copy-static-assets && npm run build-docs",
         "build-dev": "npm run build-sass && npm run build-ts && npm run lint && npm run copy-static-assets && npm run build-docs",
         "build-docs": "apidoc -i src/controllers/ -o dist/public/",
         "serve": "node dist/server.js",
