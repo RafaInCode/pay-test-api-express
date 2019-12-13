@@ -1,16 +1,16 @@
 import chai from "chai";
 import Data from "../src/data/data";
 
-const should = chai.should(); // eslint-disable-line
+const expect = chai.expect; // eslint-disable-line
 
 describe("Data", () => {
     new Data;
 
     it("should have a City", () => {    
-        Data.data.City[0].should.be.an("object");
+        expect(Data.data.City).to.not.be.empty;
     });
     
     it("should have a Weather", () => {
-        Data.data.Weather[0].should.be.an("object");
+        expect(Data.data.Weather).to.not.be.empty;
     });
 });
