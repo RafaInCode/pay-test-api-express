@@ -24,7 +24,7 @@ export const index = (req: Request, res: Response) => {
 };
 
 /**
- * @api {get} /cities:id 2. Obtem cidade por ID
+ * @api {get} /city/:id 2. Obtem cidade por ID
  * @apiName getCitiesById
  * @apiGroup Cidade
  *
@@ -63,7 +63,7 @@ export const getCity = (req: Request, res: Response) => {
 };
 
 /**
- * @api {get} /cities 3. Obtem Cidade por Periodo do Clima
+ * @api {get} /city/:id/period/:start/to/:end 3. Obtem Cidade por Periodo do Clima
  * @apiName getCityByWeatherPeriod
  * @apiGroup Cidade
  *
@@ -99,12 +99,12 @@ export const getCityWeatherPeriod = (req: Request, res: Response) => {
 };
 
 /**
- * @api {get} /cities 4. Obtem Cidade pelas Coordenadas
- * @apiName getCitiesByCoordnates
+ * @api {get} /city/coordinates/:lat/:lon 4. Obtem Cidade pelas Coordenadas
+ * @apiName getCityByCoordnates
  * @apiGroup Cidade
  *
  * @apiExample {js} Exemplo:
- *           curl -i http://localhost:8080/user/4711.
+ *           curl -i http://localhost:8080/city/coordinates/28.700001/-100.51667
  *
  * @apiSuccess {Array[]} _      List of cities
  *
@@ -119,7 +119,7 @@ export const getCityByCoordinates = (req: Request, res: Response) => {
 };
 
 /**
- * @api {get} /cities 5. Lista Cidades com Clima
+ * @api {get} /cities/weather/ 5. Lista Cidades com Clima
  * @apiName getCitiesWithWeather
  * @apiGroup Cidade
  *
